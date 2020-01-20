@@ -114,10 +114,13 @@ struct m_inode {
 };
 
 struct file {
+// f_mode 表明文件的读写权限
+// 定义在 linux/fcntl.h 中
 	unsigned short f_mode;
 	unsigned short f_flags;
 	unsigned short f_count;
 	struct m_inode * f_inode;
+// f_pos 文件读写的位置
 	off_t f_pos;
 };
 
